@@ -31,16 +31,16 @@ export default async function Page({ params }: { params: { uid: string } }) {
         </div>
         <div>
           <h1 className="font-primary text-3xl md:text-4xl font-bold text-gray-900 mb-3">{entry.title}</h1>
-          <div className="text-2xl text-luxury-gold font-semibold mb-4">
-            {entry.sale_price !== undefined && entry.sale_price !== null && entry.sale_price !== '' ? (
-              <>
-                {formatPrice(entry.sale_price)}
-                <span className="text-gray-400 line-through text-xl ml-2">{formatPrice(entry.price)}</span>
-              </>
-            ) : (
-              <>{formatPrice(entry.price)}</>
-            )}
-          </div>
+                      <div className="text-2xl text-luxury-gold font-semibold mb-4">
+                        {entry.sale_price != null ? (
+                          <>
+                            {formatPrice(entry.sale_price)}
+                            <span className="text-gray-400 line-through text-xl ml-2">{formatPrice(entry.price)}</span>
+                          </>
+                        ) : (
+                          <>{formatPrice(entry.price)}</>
+                        )}
+                      </div>
 
           {entry.description && (
             <p className="text-gray-700 leading-relaxed mb-6">{entry.description}</p>

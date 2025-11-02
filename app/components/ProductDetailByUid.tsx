@@ -31,7 +31,7 @@ export default async function ProductDetailByUid({ params, contentTypeUid }:{ pa
         <div>
           <h1 className="font-primary text-3xl md:text-4xl font-bold text-gray-900 mb-3">{entry.title}</h1>
           <div className="text-2xl text-luxury-gold font-semibold mb-4">
-            {entry.sale_price !== undefined && entry.sale_price !== null && entry.sale_price !== '' ? (
+            {entry.sale_price != null ? (
               <>
                 {formatPrice(entry.sale_price)}
                 <span className="text-gray-400 line-through text-xl ml-2">{formatPrice(entry.price)}</span>

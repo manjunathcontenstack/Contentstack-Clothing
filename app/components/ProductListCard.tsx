@@ -29,7 +29,7 @@ export default function ProductListCard({ item, href, contentTypeUid }: { item: 
           <h3 className="text-lg font-semibold text-gray-900 mb-1">{item.title}</h3>
         </Link>
         <div className="text-gray-700 mb-3">
-          {item?.sale_price !== undefined && item?.sale_price !== null && item?.sale_price !== '' ? (
+                      {item?.sale_price != null ? (
             <>
               <span className="text-luxury-gold font-semibold">{formatPrice(item.sale_price)}</span>
               <span className="text-gray-400 line-through ml-2">{formatPrice(item.price)}</span>
