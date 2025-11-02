@@ -1,0 +1,279 @@
+{
+  "created_at": "2024-11-02T20:00:00.000Z",
+  "updated_at": "2024-11-02T20:00:00.000Z",
+  "title": "Handbags",
+  "uid": "handbags",
+  "_version": 1,
+  "inbuilt_class": false,
+  "schema": [
+    {
+      "display_name": "Product Name",
+      "uid": "title",
+      "data_type": "text",
+      "mandatory": true,
+      "unique": true,
+      "field_metadata": {
+        "_default": true,
+        "version": 3
+      },
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Product Images",
+      "uid": "product_images",
+      "data_type": "file",
+      "multiple": true,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Product Description",
+      "uid": "description",
+      "data_type": "text",
+      "field_metadata": {
+        "allow_rich_text": true,
+        "multiline": true
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Price",
+      "uid": "price",
+      "data_type": "number",
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Sale Price",
+      "uid": "sale_price",
+      "data_type": "number",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Bag Type",
+      "uid": "bag_type",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Tote Bag"},
+          {"value": "Shoulder Bag"},
+          {"value": "Crossbody Bag"},
+          {"value": "Clutch"},
+          {"value": "Satchel"},
+          {"value": "Hobo Bag"},
+          {"value": "Backpack"},
+          {"value": "Evening Bag"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Material",
+      "uid": "material",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Genuine Leather"},
+          {"value": "Faux Leather"},
+          {"value": "Suede"},
+          {"value": "Canvas"},
+          {"value": "Nylon"},
+          {"value": "Satin"},
+          {"value": "Velvet"},
+          {"value": "Patent Leather"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Closure Type",
+      "uid": "closure_type",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Zipper"},
+          {"value": "Magnetic Snap"},
+          {"value": "Turn Lock"},
+          {"value": "Drawstring"},
+          {"value": "Open Top"},
+          {"value": "Clasp"},
+          {"value": "Button"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Handle Type",
+      "uid": "handle_type",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Short Handle"},
+          {"value": "Long Handle"},
+          {"value": "Adjustable Strap"},
+          {"value": "Chain Strap"},
+          {"value": "Detachable Strap"},
+          {"value": "No Handle"}
+        ]
+      },
+      "multiple": true,
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Dimensions",
+      "uid": "dimensions",
+      "data_type": "text",
+      "field_metadata": {
+        "description": "Length x Width x Height (inches)"
+      },
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Number of Compartments",
+      "uid": "compartments",
+      "data_type": "number",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Interior Pockets",
+      "uid": "interior_pockets",
+      "data_type": "number",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Exterior Pockets",
+      "uid": "exterior_pockets",
+      "data_type": "number",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Hardware Color",
+      "uid": "hardware_color",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Gold"},
+          {"value": "Silver"},
+          {"value": "Rose Gold"},
+          {"value": "Gunmetal"},
+          {"value": "Brass"},
+          {"value": "Black"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Available Colors",
+      "uid": "colors",
+      "data_type": "text",
+      "multiple": true,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Water Resistant",
+      "uid": "water_resistant",
+      "data_type": "boolean",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Laptop Compartment",
+      "uid": "laptop_compartment",
+      "data_type": "boolean",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "SKU",
+      "uid": "sku",
+      "data_type": "text",
+      "mandatory": true,
+      "unique": true,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Brand",
+      "uid": "brand",
+      "data_type": "text",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Care Instructions",
+      "uid": "care_instructions",
+      "data_type": "text",
+      "field_metadata": {
+        "multiline": true
+      },
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "In Stock",
+      "uid": "in_stock",
+      "data_type": "boolean",
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Featured Product",
+      "uid": "featured",
+      "data_type": "boolean",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    }
+  ],
+  "options": {
+    "is_page": false,
+    "singleton": false,
+    "title": "title"
+  }
+}

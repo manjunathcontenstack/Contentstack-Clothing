@@ -1,0 +1,12 @@
+{
+  "name": "contentstack-bulk-import",
+  "version": "1.0.0",
+  "description": "Bulk import content types to Contentstack Clothing",
+  "main": "bulk-import-contentstack.js",
+  "scripts": {
+    "import": "node bulk-import-contentstack.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}

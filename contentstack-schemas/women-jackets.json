@@ -1,0 +1,17 @@
+{
+  "title": "Women Jackets",
+  "uid": "women_jackets",
+  "schema": [
+    { "display_name": "Product Name", "uid": "title", "data_type": "text", "mandatory": true, "unique": true, "field_metadata": {"_default": true, "version": 3} },
+    { "display_name": "Product Images", "uid": "product_images", "data_type": "file", "multiple": true, "mandatory": true },
+    { "display_name": "Product Description", "uid": "description", "data_type": "text", "field_metadata": { "multiline": true }, "mandatory": true },
+    { "display_name": "Price", "uid": "price", "data_type": "number", "mandatory": true },
+    { "display_name": "Jacket Type", "uid": "jacket_type", "data_type": "text", "display_type": "dropdown", "enum": { "advanced": false, "choices": [ {"value": "Blazer"}, {"value": "Leather Jacket"}, {"value": "Denim Jacket"}, {"value": "Bomber"} ] }, "mandatory": true },
+    { "display_name": "Available Sizes", "uid": "sizes", "data_type": "text", "display_type": "dropdown", "enum": { "advanced": false, "choices": [ {"value": "XS"}, {"value": "S"}, {"value": "M"}, {"value": "L"}, {"value": "XL"} ] }, "multiple": true, "mandatory": true },
+    { "display_name": "SKU", "uid": "sku", "data_type": "text", "mandatory": true, "unique": true },
+    { "display_name": "In Stock", "uid": "in_stock", "data_type": "boolean", "mandatory": true }
+  ],
+  "options": { "is_page": false, "singleton": false, "title": "title" }
+}
+
+

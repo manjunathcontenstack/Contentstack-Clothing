@@ -1,0 +1,242 @@
+{
+  "created_at": "2024-11-02T20:00:00.000Z",
+  "updated_at": "2024-11-02T20:00:00.000Z",
+  "title": "Men Jackets",
+  "uid": "men_jackets",
+  "_version": 1,
+  "inbuilt_class": false,
+  "schema": [
+    {
+      "display_name": "Product Name",
+      "uid": "title",
+      "data_type": "text",
+      "mandatory": true,
+      "unique": true,
+      "field_metadata": {
+        "_default": true,
+        "version": 3
+      },
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Product Images",
+      "uid": "product_images",
+      "data_type": "file",
+      "multiple": true,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Product Description",
+      "uid": "description",
+      "data_type": "text",
+      "field_metadata": {
+        "allow_rich_text": true,
+        "multiline": true
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Price",
+      "uid": "price",
+      "data_type": "number",
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Sale Price",
+      "uid": "sale_price",
+      "data_type": "number",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Jacket Type",
+      "uid": "jacket_type",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Blazer"},
+          {"value": "Bomber"},
+          {"value": "Leather Jacket"},
+          {"value": "Denim Jacket"},
+          {"value": "Windbreaker"},
+          {"value": "Trench Coat"},
+          {"value": "Puffer Jacket"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Fabric",
+      "uid": "fabric",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Wool"},
+          {"value": "Cotton"},
+          {"value": "Leather"},
+          {"value": "Denim"},
+          {"value": "Polyester"},
+          {"value": "Nylon"},
+          {"value": "Wool Blend"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Fitting",
+      "uid": "fitting",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Slim Fit"},
+          {"value": "Regular Fit"},
+          {"value": "Relaxed Fit"},
+          {"value": "Tailored Fit"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Season",
+      "uid": "season",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Spring"},
+          {"value": "Summer"},
+          {"value": "Fall"},
+          {"value": "Winter"},
+          {"value": "All Season"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Closure Type",
+      "uid": "closure_type",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Zipper"},
+          {"value": "Button"},
+          {"value": "Snap"},
+          {"value": "Velcro"},
+          {"value": "Hook and Eye"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Available Sizes",
+      "uid": "sizes",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "XS"},
+          {"value": "S"},
+          {"value": "M"},
+          {"value": "L"},
+          {"value": "XL"},
+          {"value": "XXL"}
+        ]
+      },
+      "multiple": true,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Available Colors",
+      "uid": "colors",
+      "data_type": "text",
+      "multiple": true,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "SKU",
+      "uid": "sku",
+      "data_type": "text",
+      "mandatory": true,
+      "unique": true,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Brand",
+      "uid": "brand",
+      "data_type": "text",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Care Instructions",
+      "uid": "care_instructions",
+      "data_type": "text",
+      "field_metadata": {
+        "multiline": true
+      },
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "In Stock",
+      "uid": "in_stock",
+      "data_type": "boolean",
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Featured Product",
+      "uid": "featured",
+      "data_type": "boolean",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    }
+  ],
+  "options": {
+    "is_page": false,
+    "singleton": false,
+    "title": "title"
+  }
+}

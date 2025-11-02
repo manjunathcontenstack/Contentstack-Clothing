@@ -1,0 +1,263 @@
+{
+  "created_at": "2024-11-02T20:00:00.000Z",
+  "updated_at": "2024-11-02T20:00:00.000Z",
+  "title": "Women Jewelry",
+  "uid": "women_jewelry",
+  "_version": 1,
+  "inbuilt_class": false,
+  "schema": [
+    {
+      "display_name": "Product Name",
+      "uid": "title",
+      "data_type": "text",
+      "mandatory": true,
+      "unique": true,
+      "field_metadata": {
+        "_default": true,
+        "version": 3
+      },
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Product Images",
+      "uid": "product_images",
+      "data_type": "file",
+      "multiple": true,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Product Description",
+      "uid": "description",
+      "data_type": "text",
+      "field_metadata": {
+        "allow_rich_text": true,
+        "multiline": true
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Price",
+      "uid": "price",
+      "data_type": "number",
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Sale Price",
+      "uid": "sale_price",
+      "data_type": "number",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Jewelry Type",
+      "uid": "jewelry_type",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Necklace"},
+          {"value": "Earrings"},
+          {"value": "Bracelet"},
+          {"value": "Ring"},
+          {"value": "Pendant"},
+          {"value": "Anklet"},
+          {"value": "Brooch"},
+          {"value": "Watch"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Metal Type",
+      "uid": "metal_type",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Gold 14K"},
+          {"value": "Gold 18K"},
+          {"value": "White Gold"},
+          {"value": "Rose Gold"},
+          {"value": "Sterling Silver"},
+          {"value": "Platinum"},
+          {"value": "Titanium"},
+          {"value": "Stainless Steel"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Gemstones",
+      "uid": "gemstones",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Diamond"},
+          {"value": "Ruby"},
+          {"value": "Sapphire"},
+          {"value": "Emerald"},
+          {"value": "Pearl"},
+          {"value": "Amethyst"},
+          {"value": "Topaz"},
+          {"value": "Opal"},
+          {"value": "None"}
+        ]
+      },
+      "multiple": true,
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Chain Length (inches)",
+      "uid": "chain_length",
+      "data_type": "number",
+      "field_metadata": {
+        "description": "For necklaces and bracelets"
+      },
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Ring Size",
+      "uid": "ring_size",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "4"},
+          {"value": "4.5"},
+          {"value": "5"},
+          {"value": "5.5"},
+          {"value": "6"},
+          {"value": "6.5"},
+          {"value": "7"},
+          {"value": "7.5"},
+          {"value": "8"},
+          {"value": "8.5"},
+          {"value": "9"},
+          {"value": "9.5"},
+          {"value": "10"}
+        ]
+      },
+      "multiple": true,
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Clasp Type",
+      "uid": "clasp_type",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Lobster Claw"},
+          {"value": "Spring Ring"},
+          {"value": "Toggle"},
+          {"value": "Magnetic"},
+          {"value": "Hook and Eye"},
+          {"value": "Box Clasp"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Hypoallergenic",
+      "uid": "hypoallergenic",
+      "data_type": "boolean",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Adjustable",
+      "uid": "adjustable",
+      "data_type": "boolean",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "SKU",
+      "uid": "sku",
+      "data_type": "text",
+      "mandatory": true,
+      "unique": true,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Brand",
+      "uid": "brand",
+      "data_type": "text",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Care Instructions",
+      "uid": "care_instructions",
+      "data_type": "text",
+      "field_metadata": {
+        "multiline": true
+      },
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "In Stock",
+      "uid": "in_stock",
+      "data_type": "boolean",
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Featured Product",
+      "uid": "featured",
+      "data_type": "boolean",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Gift Box Included",
+      "uid": "gift_box_included",
+      "data_type": "boolean",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    }
+  ],
+  "options": {
+    "is_page": false,
+    "singleton": false,
+    "title": "title"
+  }
+}

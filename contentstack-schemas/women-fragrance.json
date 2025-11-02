@@ -1,0 +1,317 @@
+{
+  "created_at": "2024-11-02T20:00:00.000Z",
+  "updated_at": "2024-11-02T20:00:00.000Z",
+  "title": "Women Fragrance",
+  "uid": "women_fragrance",
+  "_version": 1,
+  "inbuilt_class": false,
+  "schema": [
+    {
+      "display_name": "Product Name",
+      "uid": "title",
+      "data_type": "text",
+      "mandatory": true,
+      "unique": true,
+      "field_metadata": {
+        "_default": true,
+        "version": 3
+      },
+      "multiple": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Product Images",
+      "uid": "product_images",
+      "data_type": "file",
+      "multiple": true,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Product Description",
+      "uid": "description",
+      "data_type": "text",
+      "field_metadata": {
+        "allow_rich_text": true,
+        "multiline": true
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Price",
+      "uid": "price",
+      "data_type": "number",
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Sale Price",
+      "uid": "sale_price",
+      "data_type": "number",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Fragrance Type",
+      "uid": "fragrance_type",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Eau de Parfum"},
+          {"value": "Eau de Toilette"},
+          {"value": "Eau de Cologne"},
+          {"value": "Parfum"},
+          {"value": "Body Mist"},
+          {"value": "Perfume Oil"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Volume (ml)",
+      "uid": "volume",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "30"},
+          {"value": "50"},
+          {"value": "75"},
+          {"value": "100"},
+          {"value": "125"},
+          {"value": "150"},
+          {"value": "200"}
+        ]
+      },
+      "multiple": true,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Scent Family",
+      "uid": "scent_family",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Floral"},
+          {"value": "Fruity"},
+          {"value": "Oriental"},
+          {"value": "Woody"},
+          {"value": "Fresh"},
+          {"value": "Gourmand"},
+          {"value": "Citrus"},
+          {"value": "Aquatic"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Top Notes",
+      "uid": "top_notes",
+      "data_type": "text",
+      "field_metadata": {
+        "description": "Comma-separated list of top notes"
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Heart Notes",
+      "uid": "heart_notes",
+      "data_type": "text",
+      "field_metadata": {
+        "description": "Comma-separated list of middle notes"
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Base Notes",
+      "uid": "base_notes",
+      "data_type": "text",
+      "field_metadata": {
+        "description": "Comma-separated list of base notes"
+      },
+      "multiple": false,
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Longevity",
+      "uid": "longevity",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "2-4 hours"},
+          {"value": "4-6 hours"},
+          {"value": "6-8 hours"},
+          {"value": "8+ hours"},
+          {"value": "All day"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Sillage",
+      "uid": "sillage",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Intimate"},
+          {"value": "Moderate"},
+          {"value": "Strong"},
+          {"value": "Enormous"}
+        ]
+      },
+      "multiple": false,
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Best Season",
+      "uid": "best_season",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Spring"},
+          {"value": "Summer"},
+          {"value": "Fall"},
+          {"value": "Winter"},
+          {"value": "All Seasons"}
+        ]
+      },
+      "multiple": true,
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Occasion",
+      "uid": "occasion",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Daily Wear"},
+          {"value": "Evening"},
+          {"value": "Office"},
+          {"value": "Date Night"},
+          {"value": "Special Occasion"},
+          {"value": "Casual"}
+        ]
+      },
+      "multiple": true,
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Age Group",
+      "uid": "age_group",
+      "data_type": "text",
+      "display_type": "dropdown",
+      "enum": {
+        "advanced": false,
+        "choices": [
+          {"value": "Teens"},
+          {"value": "20s"},
+          {"value": "30s"},
+          {"value": "40s"},
+          {"value": "50+"},
+          {"value": "All Ages"}
+        ]
+      },
+      "multiple": true,
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Gift Set Available",
+      "uid": "gift_set_available",
+      "data_type": "boolean",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Travel Size Available",
+      "uid": "travel_size_available",
+      "data_type": "boolean",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "SKU",
+      "uid": "sku",
+      "data_type": "text",
+      "mandatory": true,
+      "unique": true,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Brand",
+      "uid": "brand",
+      "data_type": "text",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "In Stock",
+      "uid": "in_stock",
+      "data_type": "boolean",
+      "mandatory": true,
+      "unique": false,
+      "non_localizable": false
+    },
+    {
+      "display_name": "Featured Product",
+      "uid": "featured",
+      "data_type": "boolean",
+      "mandatory": false,
+      "unique": false,
+      "non_localizable": false
+    }
+  ],
+  "options": {
+    "is_page": false,
+    "singleton": false,
+    "title": "title"
+  }
+}

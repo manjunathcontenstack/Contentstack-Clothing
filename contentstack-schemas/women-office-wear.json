@@ -1,0 +1,15 @@
+{
+  "title": "Women Office Wear",
+  "uid": "women_office_wear",
+  "schema": [
+    { "display_name": "Product Name", "uid": "title", "data_type": "text", "mandatory": true, "unique": true, "field_metadata": {"_default": true, "version": 3} },
+    { "display_name": "Product Images", "uid": "product_images", "data_type": "file", "multiple": true, "mandatory": true },
+    { "display_name": "Description", "uid": "description", "data_type": "text", "field_metadata": { "multiline": true }, "mandatory": true },
+    { "display_name": "Price", "uid": "price", "data_type": "number", "mandatory": true },
+    { "display_name": "SKU", "uid": "sku", "data_type": "text", "mandatory": true, "unique": true },
+    { "display_name": "In Stock", "uid": "in_stock", "data_type": "boolean", "mandatory": true }
+  ],
+  "options": { "is_page": false, "singleton": false, "title": "title" }
+}
+
+
