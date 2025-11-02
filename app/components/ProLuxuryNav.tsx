@@ -107,6 +107,16 @@ const ProLuxuryNav = () => {
 
   // Top-level categories should open submenus, not navigate directly
 
+  const getCategoryHref = (category: string) => {
+    switch (category) {
+      case 'MEN': return '/men-shirts'
+      case 'WOMEN': return '/women-jewelry'
+      case 'BAGS & WALLETS': return '/handbags'
+      case 'BEAUTY & FRAGRANCE': return '/women-fragrance'
+      default: return '#'
+    }
+  }
+
   const getHrefByItem = (item: string, parentCategory: string) => {
     const map = routeMap[parentCategory]
     if (map && map[item]) return map[item]
