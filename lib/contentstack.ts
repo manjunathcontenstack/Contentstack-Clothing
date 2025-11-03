@@ -21,8 +21,8 @@ async function csFetch<T>(path: string, init: RequestInit = {}): Promise<T> {
   const res = await fetch(url, {
     ...init,
     headers: { ...(init.headers as Record<string, string>), ...getHeaders() },
-    // Cache with ISR so pages are fast after the first request
-    next: { revalidate: 60 }
+    // Always fetch fresh to ensure newly published content shows immediately in Launch
+    cache: 'no-store'
   })
   if (!res.ok) {
     const text = await res.text()
