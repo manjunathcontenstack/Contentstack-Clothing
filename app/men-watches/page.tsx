@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import { fetchEntriesByContentType } from '../../lib/contentstack'
+import ProductListCard from '../components/ProductListCard'
 
 export const revalidate = 60
 
@@ -14,24 +14,9 @@ export default async function MenWatchesListPage() {
           <p className="text-gray-600">No watches found. Publish entries to the production environment.</p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {entries.map((item: any) => {
-              const img = item.product_images?.[0]?.url
-              return (
-                <Link key={item.uid} href={`/men-watches/${item.uid}`} className="group block rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition">
-                  <div className="aspect-[4/3] bg-gray-100">
-                    {img ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={img} alt={item.title} className="w-full h-full object-cover object-top" />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-gray-400">No image</div>
-                    )}
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">{item.title}</h3>
-                  </div>
-                </Link>
-              )
-            })}
+            {entries.map((item: any) => (
+              <ProductListCard key={item.uid} item={item} href={`/men-watches/${item.uid}`} contentTypeUid="men_watches" />
+            ))}
           </div>
         )}
       </div>
