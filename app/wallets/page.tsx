@@ -4,7 +4,21 @@ import { fetchEntriesByContentType } from '../../lib/contentstack'
 export const revalidate = 60
 
 export default async function WalletsListPage() {
-  const entries = await fetchEntriesByContentType<any>('wallets')
+  async function safe(uid: string) {
+    try {
+      return await fetchEntriesByContentType<any>(uid)
+    } catch {
+      return [] as any[]
+    }
+  }
+
+  const [longWallets, coinPurses, cardHolders] = await Promise.all([
+    safe('wallets_long'),
+    safe('coin_purses'),
+    safe('card_holders'),
+  ])
+
+  const entries = [...longWallets, ...coinPurses, ...cardHolders]
 
   return (
     <main className="min-h-screen bg-white">
@@ -15,7 +29,7 @@ export default async function WalletsListPage() {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {entries.map((item: any) => (
-              <ProductListCard key={item.uid} item={item} href={`/wallets/${item.uid}`} contentTypeUid="wallets" />
+              <ProductListCard key={item.uid} item={item} href={`/wallets/${item.uid}`} contentTypeUid={item._content_type_uid || 'wallets_long'} />
             ))}
           </div>
         )}
