@@ -102,6 +102,10 @@ export type HomePageEntry = {
     image?: { url?: string }
     headline?: string
     sub?: string
+    // Optional CTA fields for Editorial Grid cards
+    cta_url?: string
+    cta_label?: string
+    primary_cta_label?: string
   }>
   promo_panels?: Array<{
     image_url?: string

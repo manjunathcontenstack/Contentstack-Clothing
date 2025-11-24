@@ -8,9 +8,10 @@ type PanelProps = {
   subtitle: string
   cta?: string
   imageUrl?: string
+  ctaUrl?: string
 }
 
-const Panel = ({ title, subtitle, cta, imageUrl }: PanelProps) => (
+const Panel = ({ title, subtitle, cta, imageUrl, ctaUrl }: PanelProps) => (
   <motion.div
     className="relative h-[520px] rounded-2xl overflow-hidden shadow-lg"
     initial={{ opacity: 0, y: 24 }}
@@ -27,20 +28,25 @@ const Panel = ({ title, subtitle, cta, imageUrl }: PanelProps) => (
       <p className="text-luxury-gold tracking-[0.35em] text-xs mb-4">{subtitle}</p>
       <h3 className="font-primary text-4xl md:text-5xl font-bold text-white mb-6">{title}</h3>
       {cta ? (
-        <button className="self-start px-6 py-3 bg-white text-gray-900 rounded-md font-semibold tracking-wide hover:opacity-90">
-          {cta}
-        </button>
+        <a href={ctaUrl || '#'} className="inline-block">
+          <button className="self-start px-6 py-3 bg-white text-gray-900 rounded-md font-semibold tracking-wide hover:opacity-90">
+            {cta}
+          </button>
+        </a>
       ) : null}
     </div>
   </motion.div>
 )
 
 const PromoSplit = ({ left, right }: { left?: PanelProps; right?: PanelProps }) => {
+  // Fall back to desired routes when CTA URL not provided by CMS
+  const leftUrl = left?.ctaUrl || '/men-tshirts'
+  const rightUrl = right?.ctaUrl || '/women-dresses'
   return (
-    <section className="py-16 bg-white">
+    <section id="promos" className="py-16 bg-white">
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <Panel title={left?.title || 'Iconic Essentials'} subtitle={left?.subtitle || 'MEN'} cta={left?.cta || 'Shop Now'} imageUrl={left?.imageUrl} />
-        <Panel title={right?.title || 'Timeless Elegance'} subtitle={right?.subtitle || 'WOMEN'} cta={right?.cta || 'Discover'} imageUrl={right?.imageUrl} />
+        <Panel title={left?.title || 'Iconic Essentials'} subtitle={left?.subtitle || 'MEN'} cta={left?.cta || 'Shop Now'} imageUrl={left?.imageUrl} ctaUrl={leftUrl} />
+        <Panel title={right?.title || 'Timeless Elegance'} subtitle={right?.subtitle || 'WOMEN'} cta={right?.cta || 'Discover'} imageUrl={right?.imageUrl} ctaUrl={rightUrl} />
       </div>
     </section>
   )

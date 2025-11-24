@@ -12,7 +12,7 @@ function formatPrice(value: number | string | undefined | null) {
 export const dynamic = 'force-dynamic'
 
 export default async function Page({ params }: { params: { uid: string } }) {
-  const entry: any = await fetchEntryByUid<any>('men_boots', params.uid)
+  const entry: any = await fetchEntryByUid<any>('men_blazers', params.uid)
   if (!entry) return notFound()
   const img = entry.product_images?.[0]?.url
 
@@ -32,7 +32,7 @@ export default async function Page({ params }: { params: { uid: string } }) {
         <div>
           <h1 className="font-primary text-3xl md:text-4xl font-bold text-gray-900 mb-3">{entry.title}</h1>
           <div className="text-2xl text-luxury-gold font-semibold mb-4">
-            {entry.sale_price != null ? (
+            {entry?.sale_price != null && entry?.sale_price !== '' ? (
               <>
                 {formatPrice(entry.sale_price)}
                 <span className="text-gray-400 line-through text-xl ml-2">{formatPrice(entry.price)}</span>
@@ -46,13 +46,15 @@ export default async function Page({ params }: { params: { uid: string } }) {
             <p className="text-gray-700 leading-relaxed mb-6">{entry.description}</p>
           )}
 
-          <AddToCartButton item={{ uid: entry.uid, title: entry.title, price: entry.sale_price ?? entry.price, imageUrl: img, contentTypeUid: 'men_boots' }} className="mb-6 px-5 py-3 bg-luxury-gold text-luxury-black font-semibold rounded" />
+          <AddToCartButton item={{ uid: entry.uid, title: entry.title, price: entry.sale_price ?? entry.price, imageUrl: img, contentTypeUid: 'men_blazers' }} className="mb-6 px-5 py-3 bg-luxury-gold text-luxury-black font-semibold rounded" />
 
           <ul className="space-y-2 text-gray-700">
             {entry.sku && <li><span className="font-semibold">SKU:</span> {entry.sku}</li>}
             {typeof entry.in_stock === 'boolean' && (
               <li><span className="font-semibold">Availability:</span> {entry.in_stock ? 'In stock' : 'Out of stock'}</li>
             )}
+            {entry.fabric && <li><span className="font-semibold">Fabric:</span> {entry.fabric}</li>}
+            {Array.isArray(entry.sizes) && entry.sizes.length > 0 && (<li><span className="font-semibold">Sizes:</span> {entry.sizes.join(', ')}</li>)}
             {entry.brand && <li><span className="font-semibold">Brand:</span> {entry.brand}</li>}
           </ul>
 
@@ -67,8 +69,5 @@ export default async function Page({ params }: { params: { uid: string } }) {
     </main>
   )
 }
-
-
-
 
 

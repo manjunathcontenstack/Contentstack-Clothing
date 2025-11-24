@@ -41,8 +41,12 @@ const FullBleedHero = ({ imageUrl, heading, subheading }: Props) => {
             {subheading || 'Crafted for everyday luxury—refined silhouettes, modern craftsmanship, and iconic codes.'}
           </motion.p>
           <motion.div className="mt-6 flex gap-3" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
-            <button className="px-6 py-3 bg-white text-gray-900 font-semibold rounded-md hover:opacity-90">Shop Now</button>
-            <button className="px-6 py-3 border border-white text-white rounded-md hover:bg-white hover:text-gray-900 transition">Discover</button>
+            <a href="/men-jackets" className="inline-block">
+              <button className="px-6 py-3 bg-white text-gray-900 font-semibold rounded-md hover:opacity-90">Shop Now</button>
+            </a>
+            <a href="#promos" className="inline-block">
+              <button className="px-6 py-3 border border-white text-white rounded-md hover:bg-white hover:text-gray-900 transition">Discover</button>
+            </a>
           </motion.div>
         </div>
       </div>
