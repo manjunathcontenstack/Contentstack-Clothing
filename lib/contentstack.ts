@@ -1,8 +1,8 @@
 import 'server-only'
 const BASE_URL = 'https://cdn.contentstack.io/v3'
 
-const API_KEY = process.env.CONTENTSTACK_API_KEY || 'bltfe96f37415d9a587'
-const DELIVERY_TOKEN = process.env.CONTENTSTACK_DELIVERY_TOKEN || 'cs3f71c88a1fe272aab7c4a135'
+const API_KEY = process.env.CONTENTSTACK_API_KEY || ''
+const DELIVERY_TOKEN = process.env.CONTENTSTACK_DELIVERY_TOKEN || ''
 const ENVIRONMENT = process.env.CONTENTSTACK_ENVIRONMENT || 'production'
 
 type CsHeaders = Record<string, string>

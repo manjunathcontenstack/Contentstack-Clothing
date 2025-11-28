@@ -2,8 +2,8 @@ const axios = require('axios')
 const FormData = require('form-data')
 
 const BASE = 'https://api.contentstack.io/v3'
-const API_KEY = 'bltfe96f37415d9a587'
-const MGMT = 'cs9cd8c3c984f56c93190a4f61'
+const API_KEY = process.env.CS_API_KEY
+const MGMT = process.env.CS_MANAGEMENT
 const ENV = 'production'
 const LOCALE = 'en-us'
 

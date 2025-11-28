@@ -1,7 +1,7 @@
 const axios = require('axios')
 
-const STACK_API_KEY = 'bltfe96f37415d9a587'
-const MANAGEMENT_TOKEN = 'cs9cd8c3c984f56c93190a4f61'
+const STACK_API_KEY = process.env.CS_API_KEY
+const MANAGEMENT_TOKEN = process.env.CS_MANAGEMENT
 const BASE_URL = 'https://api.contentstack.io/v3'
 
 const headers = {

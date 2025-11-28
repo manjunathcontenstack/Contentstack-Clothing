@@ -2,8 +2,8 @@
 # Run this script to import all content types to your stack
 
 param(
-    [string]$StackApiKey = "bltfe96f37415d9a587",
-    [string]$ManagementToken = "cs9cd8c3c984f56c93190a4f61"
+    [string]$StackApiKey = $env:CS_API_KEY,
+    [string]$ManagementToken = $env:CS_MANAGEMENT
 )
 
 # Contentstack API Configuration
